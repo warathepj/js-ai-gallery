@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Gallery</title>
+</head>
+<body>
+  <div id="image-container"></div>
+  <script>
+    const images = {
+      'fri9.jpeg': 'public/image/fri9.jpeg',
+      'fri10.jpeg': 'public/image/fri10.jpeg',
+      'fri11.jpeg': 'public/image/fri11.jpeg'
+    };
+
+    const imageContainer = document.getElementById('image-container');
+
+    for (const filename in images) {
+      const img = document.createElement('img');
+      img.src = images[filename];
+      imageContainer.appendChild(img);
+    }
+  </script>
+</body>
+</html>
